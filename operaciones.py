@@ -1,5 +1,6 @@
-# Preguntar al usuario qué operación quiere realizar
-operacion = input("¿Qué operación deseas realizar? (suma/resta): ").strip().lower()
+#suma, resta, multiplicacion y division
+# Pedir al usuario qué operación quiere realizar
+operacion = input("¿Qué operación deseas realizar? (suma/resta/multiplicacion/division): ")
 
 # Pedir los dos números
 numero1 = int(input("Introduce el primer número: "))
@@ -12,5 +13,13 @@ if operacion == "suma":
 elif operacion == "resta":
     resultado = numero1 - numero2
     print(f"El resultado de la resta es: {resultado}")
-else:
-    print("Operación no válida. Por favor elige 'suma' o 'resta'.")
+elif operacion == "multiplicacion":
+    resultado = numero1 * numero2
+    print(f"El resultado de la multiplicación es: {resultado}")
+elif operacion == "division":
+    if numero2 != 0:
+        resultado = numero1 / numero2
+        print(f"El resultado de la división es: {resultado}")
+    else:
+        print("Error: No se puede dividir entre cero.")
+    
